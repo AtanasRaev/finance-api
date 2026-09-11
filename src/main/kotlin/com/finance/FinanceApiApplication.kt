@@ -1,0 +1,14 @@
+package com.finance
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.jdbc.autoconfigure.DataSourceAutoConfiguration
+import org.springframework.boot.runApplication
+
+@SpringBootApplication(
+    exclude = [DataSourceAutoConfiguration::class]
+)
+class FinanceApiApplication
+
+fun main(args: Array<String>) {
+    runApplication<FinanceApiApplication>(*args)
+}
